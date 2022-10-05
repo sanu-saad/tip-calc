@@ -1,0 +1,136 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size: 24px;
+  --font-weight: 700;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
+  font-weight: var(--font-weight);
+}
+
+body > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.tipcalculator__body {
+  background-color: var(--white);
+  width: 45rem;
+  height: 24rem;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.tipcalculator__body-left {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.tipcalculator__body-right {
+  flex: 0.5;
+  background-color: var(--very-dark-cyan);
+  height: 100%;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+}
+
+.tipcalculator__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.tipcalculator__input > div {
+  position: relative;
+}
+
+.tipcalculator__input input {
+  width: 100%;
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  background-color: var(--very-light-grayish-cyan);
+  border: 2px solid var(--strong-cyan);
+  text-align: end;
+  font-size: 1.2rem;
+  color: var(--very-dark-cyan);
+  font-weight: var(--font-weight);
+}
+
+.tipcalculator__input img {
+  position: absolute;
+  width: 0.7rem;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tipBtn{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+div input{
+  width: 5rem;
+  height: 2rem;
+  background-color: var(--very-light-grayish-cyan);
+  border: 1px solid var(--strong-cyan);
+  text-align: center;
+}
+.tipBtn > button{
+  background-color: var(--very-dark-cyan);
+  text-align: center;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.tipAmount, .totalAmount{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 4.4rem;
+}
+p{
+  color: var(--white);
+}
+h1{
+  color: var(--strong-cyan);
+}
+#reset{
+  width: 13rem;
+  height: 2rem;
+  background-color: var(--strong-cyan);
+  border: none;
+  margin-left: 2rem;
+  cursor: pointer;
+}
